@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-grid;   
+    place-items: center; 
+    border-radius: 15px;
+}
+.travel{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(122, 122, 135);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-grid;   
+    place-items: center; 
+    border-radius: 15px;
+}
+.location{
+    /* width: 100px;
+    height: 50px; */
+    /* background-color: rgb(122, 122, 135);  */
+    color: rgb(25, 31, 201);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-grid;   
+    place-items: center; 
+    margin-left: 70%;
+}
+
+.search{
+    width: 900px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 20px;
+
+    margin: 10px;
+    display: inline-grid;   
+    place-items: center; 
+}
+
+.login , .more , .cart{
+    width: 100px;
+    height: 50px;
+    color: rgb(18, 17, 17);
+    font-size: 20px;
+    margin: 10px;
+    display: inline-grid;   
+    place-items: center; 
+}
+.bottom .box {
+    display: inline-block;  
+    width: 70px;
+    height: 40px;
+    background-color: slateblue;  
+    place-items: center;
+    margin: 10px;
+}
+
+.image img{
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+    margin: 38px;
+}
+/* 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+.reccomendation{
+    width: 100%;
+    height: auto;
+    background-color:yellowgreen;
+}
+
+.item{
+    display: inline-block;
+}
+ footer {
+    background-color: rgb(122, 122, 135);
+    color: white;
+    padding: 20px;
+    text-align: center; 
+}
+
+.description, .about, .help {
+    display: inline-block;  
+    background-color: slateblue;  
+    color: white; 
+    padding: 8px 16px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}

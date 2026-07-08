@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cart</title>
+    <style>
+        :root{
+            --primary-color: purple;
+            --secondary-color: yellow;
+            --third-color: #3498db;
+            --default-color: #eee;
+        }
+        .parent{
+            width: 300px;
+            height: auto;
+            background-color: var(--default-color);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color:rgb(203, 37, 37);
+        }
+        body {
+            background-color: var(--default-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .childOne{
+            width: 100%;
+            height: auto;
+            background-color: var(--primary-color);
+            border-bottom: 2px solid rgb(15, 21, 182);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color:rgb(76, 191, 45);
+            padding: 10px 0;
+        }
+        .childTwo{
+            width: 100%;
+            height: auto;
+            background-color: var(--secondary-color);
+            border-bottom: 2px solid rgb(15, 21, 182);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color:black;
+            padding: 10px 0;
+        } 
+        .childThree{
+            width: 100%;
+            height: auto;
+            background-color: var(--third-color);
+            border-bottom: 2px solid red;
+            border-radius: 5px;
+            text-align: center;
+            color:black;
+            padding: 10px 0;
+        }
+        h2, p {
+            margin: 5px 0;
+        }
+        hr{
+            border-color: aqua;
+            border-top: 1px solid rgb(146, 147, 165);
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h2>Food Cart</h2>
+        <div class="childOne">
+            <h2>Soft Drink <hr></h2>
+            <p>Price: ₹1.50</p>
+        </div>
+        <div class="childTwo">
+            <h2>Pizza <hr></h2>
+            <p>Price: ₹10.99</p>
+        </div>
+        <div class="childThree">
+            <h2>Burger <hr></h2>
+            <p>Price: ₹8.99</p>
+        </div>
+    </div>
+</body>
+</html>

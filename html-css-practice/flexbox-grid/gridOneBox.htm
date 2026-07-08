@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID BOX</title>
+    <style>
+        .grid-container {
+            display: grid;
+            height: 500px;
+            width:900px;
+            border: 2px solid red;
+            grid-template-columns: repeat(4,200px);
+            grid-template-rows: repeat(4,100px);
+            /* place-items: center;
+            justify-content: center;
+            align-content: center; */
+        }
+        .item1{
+            background-color: aqua;
+            height: 80px;
+            width: 60px;
+            justify-items:start;
+
+        }
+        .item2{
+            background-color: lightcoral;
+            height: 80px;
+            width: 60px;
+            align-self:start;
+            justify-self:center;
+        }
+        .item3{
+            background-color: lightgreen;
+            height: 80px;
+            width: 60px;
+            align-self:end;
+            justify-self:center;
+        }
+        .item4{
+            background-color: rgb(203, 203, 26);
+            height: 80px;
+            width: 60px;
+            align-self:start;
+            justify-self:end;
+        }
+        .item5{
+            background-color: aqua;
+            height: 80px;
+            width: 60px;
+            align-items:start;
+            justify-items:center;
+
+
+        }
+        .item6{
+            background-color: lightcoral;
+            height: 80px;
+            width: 60px;
+            align-self:start;
+            justify-self:center;
+        }
+        .item7{
+            background-color: lightgreen;
+            height: 80px;
+            width: 60px;
+            align-self:end;
+            justify-self:center;
+        }
+        .item8{
+            background-color: rgb(203, 203, 26);
+            height: 80px;
+            width: 60px;
+            align-self:start;
+            justify-self:end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+        <div class="item7"></div>
+        <div class="item8"></div>
+        <div class="item9"></div>
+        <div class="item10"></div>
+        <div class="item11"></div>
+        <div class="item12"></div>
+        <div class="item13"></div>
+        <div class="item14"></div>
+        <div class="item15"></div>
+        <div class="item16"></div>
+    </div>
+</body>
+</html>

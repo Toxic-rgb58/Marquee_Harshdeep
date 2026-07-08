@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDO CLASS</title>
+    <style>
+        .container :hover , :active{
+            position: relative;
+            background-color: rgb(155, 176, 183);
+            color: rgb(164, 26, 26);
+        }
+        .a :visited{
+            color: purple;
+        }
+        body{
+            display:block;
+            margin: 8px;
+        }
+        .container{
+            height: 200px;
+            width: 400px;
+            border: 2px solid yellowgreen;
+            background-color: lightcoral;
+        }
+        .childParent p:hover{
+            color: red;
+            background-color: lightblue;
+        }
+        .childParent :nth-child(odd){
+            color: blue;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hover over me!</h1>
+        <p>This is a paragraph.</p>
+        <a href="https://www.linkedin.com/">This is a link</a>
+    </div>
+    <div class="childParent">
+        <p>THIS IS 1 A PARAGRAPH</p>
+        <p>THIS IS 2 A PARAGRAPH</p>
+        <p>THIS IS 3 A PARAGRAPH</p>
+        <p>THIS IS 4 A PARAGRAPH</p>
+        <p>THIS IS 5 A PARAGRAPH</p>
+    </div>    
+    </div>
+</body>
+</html>

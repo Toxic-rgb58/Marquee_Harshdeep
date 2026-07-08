@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKEW BOX</title>
+    <style>
+        .container  :hover{
+            position: relative;
+            background-color: lightblue;
+        }
+        body{
+            display:block;
+            margin: 8px;
+        }
+        :root{
+            --firstcolor: red;
+            --secondcolor: green;
+            --thirdcolor: blue;
+            --fourthcolor: yellow;
+            --fifthcolor: orange;
+            --myheight: 100px;
+            --mywidth: 100px;
+
+        }
+        .containerOne{
+            height: var(--myheight);
+            width: var(--mywidth);
+            z-index: 2;
+            margin-left: 100px;
+            border: 2px solid yellowgreen;
+            background-color: var(--firstcolor);
+        }
+        .containerTwo{
+            height: var(--myheight);
+            width: var(--mywidth);
+            z-index: 5;
+            margin-left: 200px;
+            border: 2px solid yellowgreen;
+            background-color: var(--secondcolor);
+        }
+        .containerThree{
+            height: var(--myheight);
+            width: var(--mywidth);
+            z-index: 3;
+            margin-left: 300px;
+            border: 2px solid yellowgreen;
+            background-color: var(--thirdcolor);
+        }
+        .containerFour{
+            height: var(--myheight);
+            width: var(--mywidth);
+            z-index: 7;
+            margin-left: 400px;
+            border: 2px solid yellowgreen;
+            background-color: var(--fourthcolor);
+        }
+        .containerFive{
+            height: var(--myheight);
+            width: var(--mywidth);
+            z-index: 8;
+            margin-left: 500px;
+            border: 2px solid yellowgreen;
+            background-color: var(--fifthcolor);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="containerOne"></div>
+        <div class="containerTwo"></div>
+        <div class="containerThree"></div>
+        <div class="containerFour"></div>
+        <div class="containerFive"></div>
+    </div>
+</body>
+</html>

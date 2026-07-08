@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID LUDO</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* 15x15 Main Board Grid */
+        .ludo-board {
+            display: grid;
+            grid-template-columns: repeat(15, 40px);
+            grid-template-rows: repeat(15, 40px);
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Common Track Square Styling */
+        .cell {
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* 4 Main Home Quadrants */
+        .red-home    { grid-area: 1 / 1 / 7 / 7; background-color: #ff3838; }
+        .green-home  { grid-area: 1 / 10 / 7 / 16; background-color: #2ed573; }
+        .yellow-home { grid-area: 10 / 10 / 16 / 16; background-color: #ffa502; }
+        .blue-home   { grid-area: 10 / 1 / 16 / 7; background-color: #1e90ff; }
+
+        /* Shared Home Bases Styling */
+        .home-box {
+            border: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner-space {
+            width: 70%;
+            height: 70%;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        /* Center Goal Box */
+        .center-goal {
+            grid-area: 7 / 7 / 10 / 10;
+            background: conic-gradient(
+                #ff3838 0deg 90deg, 
+                #2ed573 90deg 180deg, 
+                #ffa502 180deg 270deg, 
+                #1e90ff 270deg 360deg
+            );
+            border: 1px solid #333;
+        }
+
+        /* Colored Safety Paths and Starting Points */
+        .r-path { background-color: #ff7979; }
+        .g-path { background-color: #7bed9f; }
+        .y-path { background-color: #eccc68; }
+        .b-path { background-color: #70a1ff; }
+    </style>
+</head>
+<body>
+
+    <div class="ludo-board">
+        <!-- Main 4 Home Bases -->
+        <div class="home-box red-home"><div class="inner-space"></div></div>
+        <div class="home-box green-home"><div class="inner-space"></div></div>
+        <div class="home-box yellow-home"><div class="inner-space"></div></div>
+        <div class="home-box blue-home"><div class="inner-space"></div></div>
+
+        <!-- Center Triangle Goal -->
+        <div class="center-goal"></div>
+
+        <!-- ROW 1 to 6: Top Track (Columns 7, 8, 9) -->
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell g-path"></div><div class="cell"></div>
+
+        <!-- ROW 7: Left, Center, Right Track Blocks -->
+        <div class="cell"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div>
+        <!-- Center gap skipped dynamically via grid-area tracking -->
+        <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+        <!-- ROW 8: Left and Right Home Paths -->
+        <div class="cell"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div><div class="cell r-path"></div>
+        <div class="cell y-path"></div><div class="cell y-path"></div><div class="cell y-path"></div><div class="cell y-path"></div><div class="cell y-path"></div><div class="cell"></div>
+
+        <!-- ROW 9: Left, Center, Right Track Blocks -->
+        <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <div class="cell y-path"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+
+        <!-- ROW 10 to 15: Bottom Track (Columns 7, 8, 9) -->
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+        <div class="cell"></div><div class="cell b-path"></div><div class="cell"></div>
+    </div>
+
+</body>
+</html>

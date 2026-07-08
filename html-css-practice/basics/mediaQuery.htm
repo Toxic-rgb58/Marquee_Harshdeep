@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Media Query Properties</title>
+  <style>
+    /* Global Setup */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background-color: #f5f6fa; padding: 30px; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+    h2 { color: #2f3542; margin-bottom: 10px; }
+
+    /* Base Box Styling */
+    .box {
+      width: 280px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    /* ------------------------------------------------------------- */
+    /* 1. MAX-WIDTH PROPERTY (Desktop-to-Mobile Approach)            */
+    /* ------------------------------------------------------------- */
+    /* Applies ONLY when screen width is 600px or smaller */
+    @media (max-width: 600px) {
+      .box-max {
+        background-color: #ff4757;
+        color: white;
+        border-color: #d63031;
+      }
+      .box-max::after { content: " (Triggered: Screen ≤ 600px)"; font-size: 12px; display: block; }
+    }
+
+    /* ------------------------------------------------------------- */
+    /* 2. MIN-WIDTH PROPERTY (Mobile-First Approach)                 */
+    /* ------------------------------------------------------------- */
+    /* Applies ONLY when screen width is 900px or larger */
+    @media (min-width: 900px) {
+      .box-min {
+        background-color: #2ed573;
+        color: white;
+        border-color: #26af5f;
+      }
+      .box-min::after { content: " (Triggered: Screen ≥ 900px)"; font-size: 12px; display: block; }
+    }
+
+    /* ------------------------------------------------------------- */
+    /* 3. ORIENTATION PROPERTY (Landscape vs Portrait)               */
+    /* ------------------------------------------------------------- */
+    /* Applies ONLY when screen width is wider than its height */
+    @media (orientation: landscape) {
+      .box-orient {
+        background-color: #1e90ff;
+        color: white;
+        border-color: #0077e6;
+      }
+      .box-orient::after { content: " (Landscape Mode Active)"; font-size: 12px; display: block; }
+    }
+
+    /* ------------------------------------------------------------- */
+    /* 4. HOVER MEDIA PROPERTY (Touch Screen Detection)             */
+    /* ------------------------------------------------------------- */
+    /* Applies ONLY to devices that have a real mouse cursor (Desktops/Laptops) */
+    @media (hover: hover) {
+      .box-hover:hover {
+        background-color: #ffa500;
+        color: black;
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Media Query Test Center</h2>
+  <p style="color: #747d8c; margin-bottom: 20px;">Resize your browser window or rotate your device to see the changes.</p>
+
+  <!-- Box 1: Tests max-width -->
+  <div class="box box-max">Max-Width Box</div>
+
+  <!-- Box 2: Tests min-width -->
+  <div class="box box-min">Min-Width Box</div>
+
+  <!-- Box 3: Tests orientation -->
+  <div class="box box-orient">Orientation Box</div>
+
+  <!-- Box 4: Tests hover capabilities -->
+  <div class="box box-hover">Hover Device Box</div>
+
+</body>
+</html>

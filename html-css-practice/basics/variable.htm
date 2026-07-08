@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable CSS</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --pcolor: #7e4842;
+        }
+
+        /* body {
+            font-family: var(--font-family);
+            background-color: var(--primary-color);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        } */
+
+        .parent {
+            width: 300px;
+            height: auto;
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .child {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        p{
+            color: var(--primary-color,red);
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h2>Parent Heading</h2>
+        <div class="child">
+            <h3>Child Heading</h3>
+            <p>This is a paragraph inside the child div.</p>
+        </div>
+    </div>
+</body>
+</html>

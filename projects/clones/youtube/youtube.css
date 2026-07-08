@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+.logo, .search-container, .header-right {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    background-color: rgb(255, 28, 7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.search-container {
+    width: 60%;
+    text-align: center;
+}
+
+.search-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.header-right {
+    float: right;
+    margin-top: 5px;
+}
+
+.create-text, .notification, .profile-circle {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #bd0e0e;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+/* Sidebar and Main Content */
+.body-container {
+    padding-top: 20px;
+}
+
+.side-bar {
+    width: 200px;
+    float: left;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.side-item {
+    padding: 12px 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding-right: 20px;
+}
+
+.video-card {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    vertical-align: top;
+}
+
+.video-thumbnail {
+    background-color: #ddd;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.video-title { 
+    font-weight: bold; 
+}
+.video-channel, .video-views { 
+    color: #606060; font-size: 14px;
+}

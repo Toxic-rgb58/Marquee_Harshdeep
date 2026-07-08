@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+        }
+        .box{
+            width: 270px;
+            height: 170px;
+            border: 2px solid black;
+            background-color: lightblue;
+            display : inline-block;
+            /* display : space; */
+        }
+        .static{
+            position: relative;
+            background-color: rgb(49, 228, 157);
+        }
+        .relative{
+            position: relative;
+            background-color: rgb(133, 26, 195);
+        }
+        .absolute{
+            position: relative;
+            background-color: rgb(222, 0, 0);
+        }
+        .fixed{
+            background-color: rgb(0, 0, 222);
+            position: relative;
+            /* top: 50%;
+            left: 50%; */
+        }
+        .sticky{
+            background-color: rgb(0, 222, 0);
+            position: relative;
+            /* top: 50px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box">Box1</div>
+        <div class="box relative">Box2</div>
+        <div class="box absolute">Box3</div>
+        <div class="box fixed">Box4</div>
+        <div class="box sticky">Box5</div>
+    </div>
+</body>
+</html>

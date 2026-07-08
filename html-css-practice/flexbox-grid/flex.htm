@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            border : 2px solid black;
+            width : 900px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: space-between;
+            /* flex-wrap: wrap; */
+        }
+        .box{
+            height: 200px;
+            /* width: 100px; */
+            border : 2px solid green;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <a href="">HELLO..!!</a>
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+    </div>
+    <a href="">HEY...!!</a>
+</body>
+</html>

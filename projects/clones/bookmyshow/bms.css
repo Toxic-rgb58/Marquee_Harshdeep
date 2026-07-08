@@ -1,0 +1,261 @@
+@import url('https://googleapis.com');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    height: 64px;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+.logo h2{
+    color: #0d0c0c;
+    font-size: 24px;
+}
+
+.logo span {
+    color: #cd1a1a;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 36px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.search-bar img{
+    position: absolute;
+    left: 12px;
+}
+
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 28px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.search-bar input::placeholder {
+    color: #999999;
+}
+
+.right-nav ul{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.right-nav .city-link{
+    color: #131010;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.right-nav .city-link:hover{
+    color: #1b397f;
+}
+
+.right-nav button{
+    background-color: #f84464;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sub-nav{
+    background-color: #d6d6dd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    height: 40px;
+}
+
+.sub-nav ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.sub-nav a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #333333;
+}
+
+hr{
+    color: #d6d6dd;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #d6d6dd;
+}
+
+.hero{
+    margin: 20px 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+.poster img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.movies {
+    margin: 40px 120px;
+}
+
+.movies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.movies-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.movies-header a {
+    color: #f84464;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.poster-container {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.likes-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: #ffffff;
+}
+
+.likes-bar i {
+    color: #4fcf1d;
+    font-size: 14px;
+}
+
+.likes-bar p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.card-info {
+    padding: 10px 0;
+}
+
+.card-info h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+}
+
+.ad {
+    margin: 60px 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.ad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #0b0b0c;
+    padding: 20px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
