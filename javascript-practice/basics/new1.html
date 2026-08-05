@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Shreyansh</td>
+      <td>100</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>20</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+    <td>Bob</td>
+      <td>22</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+  </table>
+</body>
+<script>
+    const button = document.querySelectorAll(".delete")
+    for(let btn of button) {
+        btn.addEventListener("click", function(){
+            let row = this.closest("tr")
+            let name = row.children[0].innerText
+            alert(name + "Deleted")
+            row.remove()
+        })
+    }
+</script>
+</html>

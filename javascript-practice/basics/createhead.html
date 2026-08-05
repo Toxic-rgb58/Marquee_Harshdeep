@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="createDiv()">Create DOM OBJECT</button>
+    <script>
+        function createDiv(){
+            // let ndiv = document.createElement('div');
+            // document.body.appendChild(div);
+            // console.log(ndiv);
+            let head1 = document.createElement('h1');
+            head1.innerHTML = "This is a heading created using DOM";
+            head1.style.color = "blue";
+            document.body.append(head1);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cont">
+        <h3>List</h3>
+    </div>
+    <script>
+        const cont = document.getElementById('cont');
+        const p = document.createElement('p');
+        p.innerText = "Mahi"
+        cont.appendChild(p);
+        const p1 = document.createElement('p');
+        p1.innerText = "Mahi is a good girl"
+        cont.appendChild(p1).style.color = "red";
+    </script>
+</body>
+</html>

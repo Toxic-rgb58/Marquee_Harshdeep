@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Traversal</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: #f2f2f2;
+      padding: 30px;
+    }
+
+    h1{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #controls{
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .card{
+      background: white;
+      border: 2px solid gray;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    .favorite{
+      background: gold;
+    }
+
+    .actions{
+      margin-top: 15px;
+    }
+
+    .actions button{
+      margin-right: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <h1>Student Directory</h1>
+
+  <div id="controls">
+    <button id="firstBtn">First Student</button>
+    <button id="lastBtn">Last Student</button>
+    <button id="highlightBtn">Hightight All</button>
+    <button id="reset">Reset</button>
+    <button id="countBtn">Total Students</button>
+  </div>
+
+
+  <div id="container">
+      <div class="card">
+    <h2>Rahul</h2>
+    <p>MERN Stack Developer</p>
+    <div class="actions">
+      <button class="prevBtn">Prev</button>
+      <button class="nextBtn">Next</button>
+      <button class="favoriteBtn">Favorite</button>
+      <button class="deleteBtn">Delete</button>
+    </div>
+  </div>
+
+
+    <div class="card">
+    <h2>Ritik</h2>
+    <p>Python Developer</p>
+    <div class="actions">
+      <button class="prevBtn">Prev</button>
+      <button class="nextBtn">Next</button>
+      <button class="favoriteBtn">Favorite</button>
+      <button class="deleteBtn">Delete</button>
+    </div>
+    </div>
+
+    <div class="card">
+    <h2>Durvesh</h2>
+    <p>React Developer</p>
+    <div class="actions">
+      <button class="prevBtn">Prev</button>
+      <button class="nextBtn">Next</button>
+      <button class="favoriteBtn">Favorite</button>
+      <button class="deleteBtn">Delete</button>
+    </div>
+  </div>
+
+  </div>
+
+  <h2 id="result">Total Students : 3</h2>
+  <script src="stu.js"></script>
+</body>
+</html>

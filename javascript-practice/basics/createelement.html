@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> ADD STUDENT </button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function(){
+            const h1 = document.createElement('h1');
+            // console.log(h1);
+            // h1.textContent = "This is a heading created using DOM";
+            // document.body.appendChild(h1);
+            for(let i = 1; i <= 10; i++){
+                const h1 = document.createElement('h1');
+                h1.textContent = `This is heading ${i} created using DOM`;
+                document.body.appendChild(h1);
+            }
+        });
+    </script>
+</body>
+</html>

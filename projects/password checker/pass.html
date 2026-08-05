@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="pass" required>
+    <h3 id="output"></h3>
+    <script>
+        const pass = document.getElementById("pass")
+        const output = document.getElementById("output")
+        pass.addEventListener('input', function(){
+            const value = pass.value
+            if(value.length < 8){
+                output.innerText="password is weak"
+            } else if (/[A-Z]/.test(value)){
+                output.innerText="password is weak"
+            }else if(/[1-9]/.test(value)){
+                output.innerText="Password is strong"
+            }else{
+                output.innerText="Enter another password"
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br />
+    <button id="submitBtn">Submit</button>
+    <!-- Disable -->
+    <br />
+    <button id="disablebtn">Disable Submit</button>
+    <button id="enablebtn">Enable Submit</button>
+    <button id="show">Show Data</button>
+    <button id="hidden">Hide Data</button>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati amet
+      ipsa necessitatibus. Eaque ipsum velit veniam odit quos ut sunt, aut ea,
+      accusantium ratione consequuntur maiores accusamus qui ab et.
+    </p>
+    <br />
+    <br />
+
+    <input type="password" id="passsword" />
+    <script>
+      const submitBtn = document.getElementById("submitBtn");
+      const disablebtn = document.getElementById("disablebtn");
+      const enablebtn = document.getElementById("enablebtn");
+      disablebtn.addEventListener("click", () => {
+        submitBtn.disabled = true;
+      });
+      enablebtn.addEventListener("click", () => {
+        submitBtn.disabled = false;
+      });
+      const para = document.getElementById("para");
+      document.getElementById("show").onclick = function () {
+        para.style.display = "block";
+      };
+      document.getElementById("hidden").onclick = function () {
+        para.style.display = "none";
+      };
+      const password = document.getElementById("password");
+      const tgbtn = document.getElementById("toggle");
+      tgbtn.addEventListener("click", () => {
+        if (password.type === "password") {
+          password.type = "text";
+        }else{
+            password.type= "password"
+        }
+      });
+    </script>
+  </body>
+</html>

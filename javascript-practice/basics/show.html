@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <div class="details">
+        <h2>Shreyansh</h2>
+        <p>MERN Developer</p>
+        <div class="profile hidden">
+          <p>Email: shreyansh@example.com</p>
+          <p>Location: India</p>
+        </div>
+        <button class="show">
+          Show Profile
+        </button>
+      </div>
+    </div>
+  </div>
+<script>
+    const showButton = document.querySelector(".show")
+    const card = document.querySelector(".card")
+    const profile = card.querySelector(".profile")
+    
+    showButton.addEventListener("click", function(){
+        profile.classList.toggle("hidden")
+        showButton.innerText = profile.classList.contains("hidden") ? "Show Profile" : "Hide Profile"
+    })
+</script>
+</body>
+</html>

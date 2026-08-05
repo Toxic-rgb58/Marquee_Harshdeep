@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Registration Fomr</h2>
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="email" id="email" placeholder="Enter Email">
+        <button id="submit" disabled>sub</button>
+
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        const inputname=document.getElementById("name")
+        const inputemail=document.getElementById("email")
+        const submitbtn=document.getElementById("submit")
+
+        const msg=document.getElementById('msg')
+
+        function inputcheck(){
+            const name= inputname.value.trim()
+            const email= inputemail.value.trim()
+
+            if(name!=="" && email!==""){
+                submitbtn.disabled=false;
+            }else{
+                submitbtn.disabled=true;
+            }
+        }
+
+        inputname.addEventListener("input",()=>{
+            if(inputname.value.trim()==""){
+                inputname.style.border="2px solid red"
+            }else{
+                inputname.style.border="2px solid green"
+            }
+
+            inputcheck()
+        })
+
+        inputemail.addEventListener("input",()=>{
+            if(inputemail.value.trim()==""){
+                inputemail.style.border="2px solid red"
+            }else{
+                inputemail.style.border="2px solid green"
+            }
+
+            inputcheck()
+        })
+        
+        submitbtn.addEventListener('click',()=>{
+            msg.innerText="User Registering...."
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background: lightgray;
+            margin-bottom: 15px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .border-green {
+            border: 4px solid black;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nox" class="box"></div>
+    <button id="add">Add red</button>
+    <button id="remove">Remove red</button>
+    <button id="toggle">Toggle red</button>
+    <button id="replace">Replace red</button>
+    <button id="contains">Contains red</button>
+
+    <script>
+        const box = document.getElementById("nox");
+        const addBtn = document.getElementById("add");
+        const removeBtn = document.getElementById("remove");
+        const toggleBtn = document.getElementById("toggle");
+        const replaceBtn = document.getElementById("replace");
+        const containsBtn = document.getElementById("contains");
+
+        addBtn.addEventListener("click", () => {
+            if (box.classList.contains("blue")) {
+                box.classList.replace("blue", "red");
+            }else{
+            box.classList.add("red");
+            }
+        });
+
+        removeBtn.addEventListener("click", () => {
+            if (box.classList.contains("blue")) {
+                box.classList.remove("blue");
+            }else{
+            box.classList.remove("red");
+            }
+        });
+
+        toggleBtn.addEventListener("click", () => {
+            box.classList.toggle("red");
+            box.classList.toggle("circle");
+        });
+
+        replaceBtn.addEventListener("click", () => {
+            if (box.classList.contains("red")) {
+                box.classList.replace("red", "blue");
+            } else {
+                box.classList.add("red");
+            }
+        });
+
+        replaceBtn.addEventListener("dblclick", () => {
+            box.classList.toggle("border-green");
+        });
+
+        containsBtn.addEventListener("click", () => {
+            alert("Contains red? \n" + box.classList.contains("red"));
+        });
+    </script>
+</body>
+</html>
