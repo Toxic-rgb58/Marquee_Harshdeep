@@ -62,6 +62,70 @@ modeToggle.addEventListener('click', () => {
   modeText.textContent = isDark ? 'LIGHT' : 'DARK';
 });
 
+const detailHover = document.querySelector('.home_intro_hover.is-first');
+const detailCards = detailHover ? detailHover.querySelectorAll('.hover-popup img') : null;
+let detailCycleTimer = null;
+let detailTopIndex = 0;
+let detailRevealIndex = 0;
+
+function setDetailStackOrder(index) {
+  if (!detailCards) return;
+  const count = detailCards.length;
+  detailCards.forEach((card, idx) => {
+    card.classList.remove('position-top', 'position-middle', 'position-bottom');
+    const relative = (idx - index + count) % count;
+    if (relative === 0) {
+      card.classList.add('position-top');
+    } else if (relative === 1) {
+      card.classList.add('position-middle');
+    } else {
+      card.classList.add('position-bottom');
+    }
+  });
+}
+
+function resetDetailCards() {
+  detailCards.forEach((card) => {
+    card.classList.remove('visible', 'position-top', 'position-middle', 'position-bottom');
+  });
+}
+
+function detailCycleStep() {
+  if (detailRevealIndex < detailCards.length) {
+    detailCards[detailRevealIndex].classList.add('visible');
+    detailRevealIndex += 1;
+    return;
+  }
+
+  detailTopIndex = (detailTopIndex + 1) % detailCards.length;
+  setDetailStackOrder(detailTopIndex);
+}
+
+function startDetailCycle() {
+  if (!detailCards.length) return;
+  clearInterval(detailCycleTimer);
+  detailTopIndex = 0;
+  detailRevealIndex = 0;
+  resetDetailCards();
+  setDetailStackOrder(detailTopIndex);
+  detailCards[0].classList.add('visible');
+  detailRevealIndex = 1;
+  detailCycleTimer = setInterval(detailCycleStep, 1000);
+}
+
+function stopDetailCycle() {
+  clearInterval(detailCycleTimer);
+  detailCycleTimer = null;
+  resetDetailCards();
+  detailTopIndex = 0;
+  setDetailStackOrder(detailTopIndex);
+}
+
+if (detailHover) {
+  detailHover.addEventListener('mouseenter', startDetailCycle);
+  detailHover.addEventListener('mouseleave', stopDetailCycle);
+}
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
