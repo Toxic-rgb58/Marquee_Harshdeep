@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Mario Play</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-header">
+      <div class="brand-wrap">
+        <div class="logo-mark">M</div>
+        <div>
+          <div class="brand-kicker">Super Mario Bros</div>
+          <h1 class="brand-title">Super Mario Play</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-link active" href="#">PLAY</a>
+        <a class="nav-link" href="#">GAMEPLAY</a>
+        <a class="nav-link" href="#">HISTORY</a>
+        <a class="nav-link" href="#">MEDIA</a>
+        <a class="nav-link" href="#">CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button">☀</button>
+        <button class="icon-button map-button">☰</button>
+      </div>
+    </header>
+
+    <section class="game-heading">
+      <div>
+        <p class="sub-title">Nintendo Classic</p>
+        <h2 class="page-title">Play the Original Super Mario Bros Game Online</h2>
+      </div>
+      <button class="hero-button">Play Now</button>
+    </section>
+
+    <main class="game-layout">
+      <section class="game-panel">
+        <section class="hud-bar">
+          <article class="hud-card">
+            <span class="hud-label">SCORE</span>
+            <span class="hud-value" id="score">0000</span>
+          </article>
+          <article class="hud-card">
+            <span class="hud-label">COINS</span>
+            <span class="hud-value" id="coins">00</span>
+          </article>
+          <article class="hud-card">
+            <span class="hud-label">LIVES</span>
+            <span class="hud-value lives" id="lives">♥♥♥</span>
+          </article>
+          <article class="hud-card world-card">
+            <span class="hud-label">WORLD</span>
+            <span class="hud-value">1-1</span>
+          </article>
+          <article class="hud-card time-card">
+            <span class="hud-label">TIME</span>
+            <span class="hud-value">380</span>
+          </article>
+        </section>
+
+        <section class="canvas-shell">
+          <canvas id="gameCanvas" width="960" height="540"></canvas>
+          <div class="canvas-actions">
+            <button id="startBtn" class="primary-button">Start Run</button>
+          </div>
+        </section>
+
+        <section class="touch-controls">
+          <button id="leftBtn" class="touch-button">◀</button>
+          <button id="jumpBtn" class="touch-button jump-button">Jump</button>
+          <button id="rightBtn" class="touch-button">▶</button>
+        </section>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel-card mission-card">
+          <div class="panel-header">
+            <span class="panel-title">Mission</span>
+            <span class="badge">Daily</span>
+          </div>
+          <h2 class="mission-title">Castle Rush</h2>
+          <p class="mission-copy">
+            Collect coins, beat koopas, and sprint to the flag tower to save the kingdom.
+          </p>
+          <div class="progress-block">
+            <div class="bar-track">
+              <div id="progressFill" class="bar-fill"></div>
+            </div>
+            <span id="progressText" class="progress-text">30%</span>
+          </div>
+        </section>
+
+        <section class="panel-card power-card">
+          <div class="panel-header compact">
+            <span class="panel-title">Power Ups</span>
+            <span class="badge success">Ready</span>
+          </div>
+          <div class="power-list">
+            <article class="power-row">
+              <span class="power-icon fire">✦</span>
+              <div>
+                <h3>Fire Boots</h3>
+                <p>Speed boost ready</p>
+              </div>
+            </article>
+            <article class="power-row">
+              <span class="power-icon star">✹</span>
+              <div>
+                <h3>Star Rush</h3>
+                <p>Invincible mode</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel-card leaderboard-card">
+          <div class="panel-header compact">
+            <span class="panel-title">Leaderboard</span>
+            <span class="badge">Top</span>
+          </div>
+          <ul class="leader-list">
+            <li><span>01. Plumber Kid</span><strong>9800</strong></li>
+            <li><span>02. Red Runner</span><strong>7600</strong></li>
+            <li><span>03. You</span><strong id="leaderScore">0000</strong></li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

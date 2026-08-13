@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Application</title>
+  <link rel="stylesheet" href="new.css">
+</head>
+<body>
+
+  <h1>Shopping Cart App</h1>
+
+  <!-- Product Input Form -->
+  <div class="card">
+    <h2 id="form-title">Add Product</h2>
+    <form id="product-form">
+      <input type="hidden" id="edit-id">
+      
+      <input type="text" id="name" placeholder="Product Name" required>
+      <input type="number" id="price" placeholder="Price" step="0.01" min="0" required>
+      <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+      
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Books">Books</option>
+      </select>
+
+      <button type="submit" id="save-btn">Add Product</button>
+      <button type="button" id="cancel-btn" style="display:none;">Cancel Edit</button>
+    </form>
+  </div>
+
+  <!-- Search & Filter Controls -->
+  <div class="card controls">
+    <input type="text" id="search-input" placeholder="Search by name...">
+    
+    <select id="filter-category">
+      <option value="All">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Books">Books</option>
+    </select>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="card summary">
+    <h2>Cart Summary</h2>
+    <p>Total Products: <span id="total-products">0</span></p>
+    <p>Total Quantity: <span id="total-quantity">0</span></p>
+    <p>Grand Total: $<span id="grand-total">0.00</span></p>
+    <button id="clear-cart-btn" class="btn-danger">Clear Cart</button>
+  </div>
+
+  <!-- Display Product Cards -->
+  <h2>Products in Cart</h2>
+  <div id="product-list" class="grid"></div>
+
+  <script src="new.js"></script>
+</body>
+</html>

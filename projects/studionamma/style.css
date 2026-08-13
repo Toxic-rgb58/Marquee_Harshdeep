@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/226f58ab113a6d821def90a7d6dc2427?family=GT+Pressura+Mono+Regular+Regular);
+﻿@import url(https://db.onlinewebfonts.com/c/226f58ab113a6d821def90a7d6dc2427?family=GT+Pressura+Mono+Regular+Regular);
 
 * {
   margin: 0;
@@ -14,8 +14,8 @@ body {
 }
 
 body.dark-mode {
-  background: #050505;
-  color: #f5f5f5;
+  background: #fff;
+  color: #111;
 }
 
 .navbar{
@@ -49,14 +49,22 @@ body.dark-mode {
   justify-content: space-between;
 }
 
-.hero{
-  font-family: sans-serif;
+.hero {
+  font-family: "Mixtape Extra Condensed", Verdana, sans-serif;
   font-weight: 800;
-  font-size: clamp(4rem, 12vw, 180px); 
+  font-size: 74px;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-align: center;
-  padding-top: 120px; 
-  line-height: 1.2;
+  padding-top: 120px;
+  color: #111;
+  background: #fff;
   transition: filter 0.2s ease, color 0.35s ease;
+}
+
+.hero p {
+  margin: 0;
 }
 
 .hero.blur {
@@ -79,7 +87,8 @@ body.dark-mode {
 }
 
 body.dark-mode .hero {
-  color: #f5f5f5;
+  color: #111;
+  background: #fff;
 }
 
 .hero-copy {
@@ -250,6 +259,30 @@ body.dark-mode .navbar {
   display: inline-block;
 }
 
+.hero-lines {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-lines .hero-line {
+  display: block;
+  width: 100%;
+  color: #111;
+  font-family: "Mixtape Extra Condensed", Verdana, sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 body.dark-mode .navbar,
 body.dark-mode .mode span,
 body.dark-mode .logo span,
@@ -257,6 +290,7 @@ body.dark-mode .connect span,
 body.dark-mode .menu span {
   color: #f5f5f5;
 }
+
 
 .cursor-box{
   width: 420px;
